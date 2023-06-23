@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AccountService } from '@app/Auth/Services';
+import { AccountService, AlertService } from '@app/Auth/Services';
 import { first } from 'rxjs';
 
 @Component({
@@ -13,12 +13,13 @@ export class RegisterComponent implements OnInit {
   form!: FormGroup;
   loading = false;
   submitted = false;
-  error?: string;
+  //error?: string;
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private alertService: AlertService
   ) {
     // redirect to home if already logged in
     if (this.accountService.userValue) {
@@ -38,7 +39,9 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     // reset alert on submit
-    this.error = '';
+    //this.error = '';
+    this.alertService.clear();
+
     // stop here if form is invalid
     if (this.form.invalid) {
       return;
@@ -48,12 +51,14 @@ export class RegisterComponent implements OnInit {
       .pipe(first())
       .subscribe({
         next: () => {
+          this.alertService.success('Registration successful', true);
           this.router.navigate(['/account/login'], { queryParams: { registered: true } });
         },
         error: error => {
-          this.error = error;
+          // this.error = error;
+          this.alertService.error(error);
           this.loading = false;
         }
       });
   }
-} 
+}
