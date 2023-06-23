@@ -1,3 +1,4 @@
+import { NgClass, NgIf } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AlertService } from '@app/Auth/Services';
 import { Subscription } from 'rxjs';
@@ -5,7 +6,9 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-alert',
   templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.css']
+  styleUrls: ['./alert.component.css'],
+  standalone: true,
+  imports: [NgIf, NgClass]
 })
 export class AlertComponent implements OnInit, OnDestroy {
   private subscription!: Subscription;

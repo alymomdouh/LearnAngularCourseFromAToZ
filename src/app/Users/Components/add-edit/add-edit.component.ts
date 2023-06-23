@@ -7,7 +7,9 @@ import { first } from 'rxjs';
 @Component({
   selector: 'app-add-edit',
   templateUrl: './add-edit.component.html',
-  styleUrls: ['./add-edit.component.css']
+  styleUrls: ['./add-edit.component.css'],
+  //standalone: true,
+  //imports: [NgIf, ReactiveFormsModule, NgClass, RouterLink]
 })
 export class AddEditComponent implements OnInit {
   form!: FormGroup;

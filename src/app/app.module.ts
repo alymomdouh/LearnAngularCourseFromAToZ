@@ -14,16 +14,20 @@ import { AlertComponent } from './Shared';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    AlertComponent
+    //LoginComponent,
+    // RegisterComponent,
+    // HomeComponent,
+    //AlertComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlertComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
