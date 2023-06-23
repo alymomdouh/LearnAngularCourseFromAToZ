@@ -8,3 +8,4 @@ The index.ts file is a barrel file that re-exports components from the _services
  */
 
 export * from './account.service';
+export * from './alert.service';
