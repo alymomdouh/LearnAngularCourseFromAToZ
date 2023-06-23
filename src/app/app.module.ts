@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './Auth/components/login/login.component';
 import { RegisterComponent } from './Auth/components/register/register.component';
 import { HomeComponent } from './Auth/components/home/home.component';
-import { fakeBackendProvider } from './helpers/fake-backend';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { fakeBackendProvider } from './helpers';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { fakeBackendProvider } from './helpers/fake-backend';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [
