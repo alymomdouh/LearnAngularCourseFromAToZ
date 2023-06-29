@@ -1,27 +1,18 @@
-# LearnAngularCourse
+# Angular 15/16 Free Course
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### [Part 1 - Create Base Project Structure](https://jasonwatmore.com/angular-15-free-course-1-create-base-project-structure)
+#### [Part 2 - Add Routing & Multiple Pages](https://jasonwatmore.com/angular-15-free-course-2-add-routing-multiple-pages)
+  
+#### [Part 3 - Login Form, Authentication & Route Guard](https://jasonwatmore.com/angular-15-free-course-3-login-form-authentication-route-guard)
+  
+#### [Part 4 - Registration Form & Service Methods](https://jasonwatmore.com/angular-15-free-course-4-registration-form-service-methods)
+  
+#### [Part 5 - Alerts & Home Page](https://jasonwatmore.com/angular-15-free-course-5-alerts-home-page)
+  
+#### [Part 6 - User Management (CRUD) Section](https://jasonwatmore.com/angular-15-free-course-6-user-management-crud-section)
+  
+#### [Part 7 - Migrate to Standalone Components and Functional Interceptors](https://jasonwatmore.com/angular-15-16-free-course-7-migrate-to-standalone-components-and-functional-interceptors)
+  
+#### [Part 8 - Dockerize App with Nginx](https://jasonwatmore.com/angular-15-16-free-course-8-dockerize-app-with-nginx)    not view yet
+  
+ 
