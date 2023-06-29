@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './Auth/components/register/register.component';
 import { LoginComponent } from './Auth/components/login/login.component';
 import { HomeComponent } from './Auth/components/home/home.component';
-import { AuthGuard } from './helpers';
+import { authGuard } from './helpers';
+//import { AuthGuard } from './helpers';
 const usersModule = () => import('./Users/users.module').then(x => x.UsersModule);
-
+/*
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'account/login', component: LoginComponent },
@@ -14,9 +15,18 @@ const routes: Routes = [
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
+*/
+export const APP_ROUTES: Routes = [
+  { path: '', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'users', loadChildren: usersModule, canActivate: [authGuard] },
+  { path: 'account/login', component: LoginComponent },
+  { path: 'account/register', component: RegisterComponent },
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
+];
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }

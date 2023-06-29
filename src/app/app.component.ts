@@ -9,8 +9,8 @@ import { AlertComponent } from './Shared';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  //standalone: true,
-  //imports: [NgIf, RouterOutlet, RouterLink, RouterLinkActive, AlertComponent]
+  standalone: true,
+  imports: [NgIf, RouterOutlet, RouterLink, RouterLinkActive, AlertComponent]
 })
 export class AppComponent {
   title = 'LearnAngularCourse';
